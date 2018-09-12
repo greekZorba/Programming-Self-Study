@@ -1,6 +1,10 @@
-package com.algorithm.kakao;
+package com.zorba.practice.kakao;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class BlindTestNumber2 {
 
@@ -22,12 +26,12 @@ public class BlindTestNumber2 {
 
             char checkChar = givenInput.charAt(i);
             if((checkChar == '0' && givenInput.charAt(i-1) != '1') || (checkChar == '1' && givenInput.charAt(i+1) != '0')
-                    || checkChar == '2' || checkChar == '3' || checkChar == '4'
-                    || checkChar == '5' || checkChar == '6' || checkChar == '7'
-                    || checkChar == '8' || checkChar == '9'){
+              || checkChar == '2' || checkChar == '3' || checkChar == '4'
+              || checkChar == '5' || checkChar == '6' || checkChar == '7'
+              || checkChar == '8' || checkChar == '9'){
 
                 scoreArray[++scoreOrder] = Character.getNumericValue(checkChar);
-
+                
             }else if(checkChar == '1' && givenInput.charAt(i+1) == '0'){
                 scoreArray[++scoreOrder] = 10;
 
@@ -49,7 +53,7 @@ public class BlindTestNumber2 {
                     scoreArray[scoreOrder-1] = scoreArray[scoreOrder-1]*2;
                 }
             }else if(checkChar == '#'){
-                scoreArray[scoreOrder] = -scoreArray[scoreOrder];
+                    scoreArray[scoreOrder] = -scoreArray[scoreOrder];
             }
         }
 
@@ -57,9 +61,11 @@ public class BlindTestNumber2 {
 
         for(double score: scoreArray){
             sum += (int)score;
-
+            
         }
 
         return sum;
     }
 }
+
+

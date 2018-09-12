@@ -1,4 +1,4 @@
-package com.algorithm.kakao;
+package com.zorba.practice.kakao;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
