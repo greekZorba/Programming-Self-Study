@@ -1,11 +1,10 @@
-package com.zorba.practice.kakao;
+package com.algorithm.kakao;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
 public class BlindTestNumber3 {
@@ -23,22 +22,28 @@ public class BlindTestNumber3 {
 	private static int calculate(int cacheSize, String[] inputArray){
 		LinkedList<String> cache = new LinkedList<>();
 		int runTime = 0;
-		
+
 		for(int i=0; i<inputArray.length; i++){
+			inputArray[i] = inputArray[i].toUpperCase();
+
 			if(cache.contains(inputArray[i])){
 				cache.remove(inputArray[i]);
+				cache.add(inputArray[i]);
 				runTime += 1;
-				
-			}else if(cache.size() == cacheSize && cache.size() != 0){
-				cache.remove();
+
+			}else if(cacheSize > 0){
+				if(cache.size() == cacheSize){
+					cache.remove();
+				}
+
 				runTime += 5;
-				
+				cache.add(inputArray[i]);
 			}else{
 				runTime += 5;
 			}
-			cache.add(inputArray[i]);
+
 		}
-		
+
 		return runTime;
 	}
 	

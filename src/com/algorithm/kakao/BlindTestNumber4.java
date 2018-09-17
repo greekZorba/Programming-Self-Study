@@ -5,8 +5,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -21,11 +19,11 @@ public class BlindTestNumber4 {
 		int n = Integer.parseInt(br.readLine()); // n 셔틀 운행 횟수
 		int t = Integer.parseInt(br.readLine()); // t 셔틀 운행 간격
 		int m = Integer.parseInt(br.readLine()); // m 버스에 탈 수 있는 최대 크루 수
-		String originInput = br.readLine(); // 크루들이 도착하는 타임테이블
+		String timetable = br.readLine(); // 크루들이 도착하는 타임테이블
 
 		/* 계산을 위해 입력값 변형 */
-		originInput = originInput.substring(2, originInput.length()-2).replace("\"", "");
-		String[] inputArray = originInput.split(", ");
+		timetable = timetable.substring(2, timetable.length()-2).replace("\"", "");
+		String[] inputArray = timetable.split(", ");
 		String shouldArriveTime = calculateShuttleTime(n, t, m, inputArray);
 
 		bw.write(shouldArriveTime);
