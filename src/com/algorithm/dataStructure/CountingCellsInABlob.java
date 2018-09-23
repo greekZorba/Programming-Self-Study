@@ -5,6 +5,7 @@ package com.algorithm.dataStructure;
  *
  * Blob은 서로 연결된 이미지 pixel들의 집합을 말한다.
  *
+ * 출처: inflearn 권오흠 교수님 알고리즘 강좌
  *
  *********************************************************************/
 public class CountingCellsInABlob {
