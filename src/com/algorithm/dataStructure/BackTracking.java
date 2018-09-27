@@ -39,7 +39,7 @@ public class BackTracking {
                 }
             }
 
-            return  false;
+            return  false; // 어디에도 겹치지 않게 놓을 자리가 없음
         }
 
     }
