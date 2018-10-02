@@ -14,7 +14,7 @@ public class BackTracking {
     static int[] backTrackingRoute;
     static int N; // 체스판의 크기
     public static void main(String[] args){
-        N = 8; // 체스판의 크기
+        N = 10; // 체스판의 크기
         backTrackingRoute = new int[N+1];
         queens(0);
         for(int i=1; i<backTrackingRoute.length; i++){
