@@ -51,6 +51,7 @@ public class PowerSet {
 
             return;
         }
+
         include[level] = false; // 트리 왼쪽 먼저 조회 - 자신이 포함 안 된 집합
         powerSet(level+1);
 
