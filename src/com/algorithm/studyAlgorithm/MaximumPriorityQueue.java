@@ -1,4 +1,4 @@
-package com.algorithm.dataStructure;
+package com.algorithm.studyAlgorithm;
 
 import java.util.ArrayList;
 import java.util.List;
