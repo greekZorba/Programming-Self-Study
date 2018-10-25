@@ -1,4 +1,4 @@
-package com.algorithm.studyAlgorithm;
+package com.algorithm.studyAlgorithm.BinarySearchTree;
 
 import java.util.Arrays;
 
@@ -45,28 +45,30 @@ public class BinarySearchTree {
         binaryTree = new int[]{1,5,7,2,10,3,40,6,20,55,21,33};
         Arrays.sort(binaryTree); /** 이진검색트리로 만들어줌 */
 
-        binarySearch(0, binaryTree.length-1, 5);
+        /** 마지막 인덱스가 배열의 인덱스보다 1 커야 마지막 배열도 체크할 수 있다. */
+        binarySearch(0, binaryTree.length, 56);
         System.out.println(result);
     }
 
     private static void binarySearch(int startIndex, int endIndex, int findingInt){
-        int rootNodeIndex = (endIndex + startIndex)/2;
+        /** 이진검색트리는 크기에 중간 값이 부모 노드가 되기 때문에 아래와 같은 방식으로 부모 노드를 구현*/
+        int parentNodeIndex = (endIndex + startIndex)/2;
 
-        if(rootNodeIndex == startIndex || findingInt == binaryTree[rootNodeIndex]){
+        if(parentNodeIndex == startIndex || findingInt == binaryTree[parentNodeIndex]){
 
-             result = findingInt != binaryTree[rootNodeIndex]
-                        ? "못찾겠다 꾀꼬리" : "숫자는 "+String.valueOf(rootNodeIndex+1)+"번째 순서에 있다";
+             result = findingInt != binaryTree[parentNodeIndex]
+                        ? "못찾겠다 꾀꼬리" : "숫자는 "+String.valueOf(parentNodeIndex+1)+"번째 순서에 있다";
              return;
         }
 
-        if(findingInt > binaryTree[rootNodeIndex]){
+        if(findingInt > binaryTree[parentNodeIndex]){
 
-            startIndex = rootNodeIndex;
+            startIndex = parentNodeIndex;
             binarySearch(startIndex, endIndex, findingInt);
 
         }else{
 
-            endIndex = rootNodeIndex;
+            endIndex = parentNodeIndex;
             binarySearch(startIndex, endIndex, findingInt);
         }
     }
