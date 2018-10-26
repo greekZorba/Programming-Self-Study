@@ -21,9 +21,11 @@ public class TreeInsert {
             System.out.print(out+" ");
         }
         System.out.println();
-        System.out.println("이진검색트리 삽입 !! --");
 
-        insertIntoBinarySearchTree(binaryTree, 18);
+        int insertValue = 18;
+        System.out.println("이진검색트리에 "+ insertValue + "을 삽입 !! ");
+
+        insertIntoBinarySearchTree(binaryTree, insertValue);
     }
 
     private static void insertIntoBinarySearchTree(LinkedList<Integer> inputArray, int insertValue){
