@@ -61,7 +61,7 @@ public class TreeDelete {
         tree.inorder();
     }
 
-    // Java program to demonstrate delete operation in binary search tree
+    /** 이진검색트리에서 삭제 구현 하기 ! */
     private static class PrivateBinarySearchTree
     {
         /* Class containing left and right child of current node and key value*/
@@ -95,30 +95,32 @@ public class TreeDelete {
         /* A recursive function to insert a new key in BST */
         Node deleteRec(Node root, int key)
         {
-            /* Base Case: If the tree is empty */
+            /** 트리가 비어있다면 다시 리턴 */
             if (root == null) return root;
 
-            /* Otherwise, recur down the tree */
+            /** 아래는 삭제하고 싶은 값을 트리에서 찾는 방법이다. */
             if (key < root.key)
                 root.left = deleteRec(root.left, key);
             else if (key > root.key)
                 root.right = deleteRec(root.right, key);
 
-                // if key is same as root's key, then This is the node
-                // to be deleted
+            /** 재귀로 계속해서 동일한 노드를 찾게 한 다음 찾았을 때, else를 타게 된다.
+             *  그리고 찾았으니 삭제하자.
+             * */
             else
             {
-                // node with only one child or no child
+                /** 자식이 없거나 하나일 때 */
                 if (root.left == null)
                     return root.right;
                 else if (root.right == null)
                     return root.left;
 
-                // node with two children: Get the inorder successor (smallest
-                // in the right subtree)
+                /** 자식 노드가 2개일 경우, successor를 구한다. successr의 설명은 최상단 주석 참고.
+                 *  그리고 successor가 삭제하려는 노드 자리로 들어간다.
+                 * */
                 root.key = minValue(root.right);
 
-                // Delete the inorder successor
+                /** 기존의 successor를 삭제해준다. */
                 root.right = deleteRec(root.right, root.key);
             }
 
