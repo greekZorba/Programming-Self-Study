@@ -1,10 +1,15 @@
-package com.algorithm.dataStructure;
+package com.algorithm.studyAlgorithm;
 
 /********************************************************************
  *
  *
  * n queens problem(체스에서 퀸을 놓았을 때 겹치지 않게 모두 놓을 수 있게 함)
  * 을 활용한 백트래킹 정리
+ *
+ * 상태공간트리 개념이 등장하는데, 상태공간트리란 찾는 해를 포함하는 트리라는 의미이다.
+ * 즉 해가 존재한다면 그것은 반드시 이 트리의 어떤 한 노드에 해당한다.
+ * 따라서 이 트리를 체계적으로 탐색하면 해를 구할 수 있다.
+ *
  *
  * 출처: inflearn 권오흠 교수님 알고리즘 강좌
  *
@@ -14,7 +19,7 @@ public class BackTracking {
     static int[] backTrackingRoute;
     static int N; // 체스판의 크기
     public static void main(String[] args){
-        N = 8; // 체스판의 크기
+        N = 10; // 체스판의 크기
         backTrackingRoute = new int[N+1];
         queens(0);
         for(int i=1; i<backTrackingRoute.length; i++){
