@@ -1,4 +1,4 @@
-package com.algorithm.baekjoon;
+package src.com.algorithm.studyAlgorithm.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
