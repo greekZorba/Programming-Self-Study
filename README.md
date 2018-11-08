@@ -9,7 +9,7 @@
 * [최대 힙 정렬(MaxHeapSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/HeapSort.java)
 * [최대 우선 순위 큐(MaximumPriorityQueue)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/MaximumPriorityQueue.java)
 * [합병정렬(MergeSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/MergeSort.java)
-* [멱집합(PowerSet](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/PowerSet.java)
+* [멱집합(PowerSet)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/PowerSet.java)
 * [퀵소트(QuickSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/QuickSort.java)
 * [기수 정렬(RadixSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/RadixSort.java)
 * [이진 검색 트리(BinarySearchTree)](https://github.com/greekZorba/AlgorithmStudy/tree/master/src/com/algorithm/studyAlgorithm/BinarySearchTree)
