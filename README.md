@@ -1,4 +1,4 @@
-# 자료구조와 알고리즘, 프로그래밍의 개념 예시
+# 자료구조와 알고리즘, 프로그래밍의 개념 예시(Language: java)
 <strong>자료구조</strong>
 * [백트래킹(BackTracking)- nQueen problem](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/BackTracking.java)
 * [너비우선탐색(BreadthFirstSearch)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/BreadthFirstSearch.java)
@@ -6,6 +6,7 @@
 * [최대 힙 정렬(BuildMaxHeap)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/BuildMaxHeap.java)
 * [counting Blobs(by using recursion)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/CountingCellsInABlob.java)
 * [카운팅 소트(CountingSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/CountingSort.java)
+* [깊이우선탐색(DepthFirstSearch)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/DepthFirstSearch.java)
 * [최대 힙 정렬(MaxHeapSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/HeapSort.java)
 * [최대 우선 순위 큐(MaximumPriorityQueue)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/MaximumPriorityQueue.java)
 * [합병정렬(MergeSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/MergeSort.java)
