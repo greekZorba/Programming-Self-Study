@@ -1,4 +1,4 @@
-# 자료구조와 알고리즘, 프로그래밍의 개념 예시(Language: java)
+#  컴퓨터 공부(프로그래밍 개념, 자료구조, 알고리즘) - Language: java
 <strong>자료구조</strong>
 * [백트래킹(BackTracking)- nQueen problem](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/BackTracking.java)
 * [너비우선탐색(BreadthFirstSearch)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/BreadthFirstSearch.java)
@@ -17,7 +17,7 @@
 
 <br>
 
-<strong> 프로그래밍 개념적인 공부</strong>
+<strong> 프로그래밍 개념</strong>
 * [(상속받은 DTO를 사용할 경우, 자식 DTO를 Map에 담으면 부모 DTO의 객체는 Map에 담기지 않는다)의 예시](https://github.com/greekZorba/AlgorithmStudy/tree/master/src/com/concept/aboutDTO)
 * [배타적 논리합(XorStudy)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/concept/XorStudy.java)
 <br>
