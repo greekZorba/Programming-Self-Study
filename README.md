@@ -20,6 +20,7 @@
 <strong> 프로그래밍 개념</strong>
 * [(상속받은 DTO를 사용할 경우, 자식 DTO를 Map에 담으면 부모 DTO의 객체는 Map에 담기지 않는다)의 예시](https://github.com/greekZorba/AlgorithmStudy/tree/master/src/com/concept/aboutDTO)
 * [배타적 논리합(XorStudy)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/concept/XorStudy.java)
+* [DTO에 생성자를 추가해서 객체의 default 값 만들어주기](https://github.com/greekZorba/ProgrammingStudy/tree/master/src/com/concept/constructOfDto)
 <br>
 
 <strong> 코딩 테스트 풀이소스 </strong>
