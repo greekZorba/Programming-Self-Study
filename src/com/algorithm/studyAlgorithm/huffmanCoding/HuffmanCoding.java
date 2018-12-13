@@ -11,6 +11,7 @@ public class HuffmanCoding {
 
     private Heap<Run> heap; /** minimum heap */
     private Run theRoot = null; /** root of Huffman tree */
+    private Run[] chars = new Run[256];
 
     private void collectionRuns(RandomAccessFile fIn) throws IOException{
         /**
@@ -39,11 +40,27 @@ public class HuffmanCoding {
         }
     }
 
+    /** Huffman 트리의 모든 리프노드들을 chars에 recursion으로 저장한다 */
+    private void storeRunsIntoArray(Run leafNode){
+        if(leafNode.left == null && leafNode.right == null){
+            insertToArray(leafNode);
+        }else{
+            storeRunsIntoArray(leafNode.left);
+            storeRunsIntoArray(leafNode.right);
+        }
+    }
+
     public void compressFile(RandomAccessFile fIn) throws IOException{
 
         collectionRuns(fIn);
         createHuffmanTree();
         assignCodeword(theRoot, "0", "0");
+        storeRunsIntoArray(theRoot);
+    }
+
+    /** 배열 chars에서 (symbol, length)에 해당하는 run을 찾아 반환한다. */
+    public Run findRun(byte symbol, int length){
+
     }
 
     public static void main(String[] args){
