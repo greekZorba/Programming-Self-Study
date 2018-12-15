@@ -17,6 +17,7 @@ public class Run implements Comparable<Run>{
     /** 비교의 기준은 freq이다. */
     @Override
     public int compareTo(Run o) {
-        return 0;
+
+        return freq - o.freq;
     }
 }
