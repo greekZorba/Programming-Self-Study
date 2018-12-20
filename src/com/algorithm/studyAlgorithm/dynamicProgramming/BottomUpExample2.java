@@ -15,4 +15,44 @@ package com.algorithm.studyAlgorithm.dynamicProgramming;
  *  nCk를 구하는 공식: n!/(n-k)!k!
  * */
 public class BottomUpExample2 {
+
+    private static int[][] rememberBinomial;
+
+    public BottomUpExample2(int n, int k){
+        rememberBinomial = new int[n+1][k+1];
+    }
+
+    private int bottomUpBinomial(int n, int k){
+
+        /** i가 n값을, j가 k값을 대변한다고 볼 수 있다. */
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<=k && j<=i; j++){
+
+                if(j==0 || j == i){
+                    rememberBinomial[i][j] = 1;
+                }else{
+                    rememberBinomial[i][j] = rememberBinomial[i-1][j-1]+ rememberBinomial[i-1][j];
+                }
+            }
+        }
+
+        return rememberBinomial[n][k];
+    }
+
+    public static void main(String[] args){
+        int n = 5;
+        int k = 2;
+        BottomUpExample2 bottomUp = new BottomUpExample2(n, k);
+        System.out.println("BottomUp을 활용해서 나온 이항계수 결과 값 : "+bottomUp.bottomUpBinomial(n,k));
+
+        System.out.println("--- 이차원배열로 그려진 이항계수 모습 ---");
+        for(int i=0; i<rememberBinomial.length; i++){
+
+            for(int j=0; j<rememberBinomial[0].length; j++){
+                System.out.print(rememberBinomial[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+
 }
