@@ -30,7 +30,12 @@ public class BottomUpExample2 {
 
                 if(j==0 || j == i){
                     rememberBinomial[i][j] = 1;
-                }else{
+                }
+                /**
+                 * rememberBinomial[i][j] = rememberBinomial[i-1][j-1]+ rememberBinomial[i-1][j] 경우,
+                 * nCk = n-1Ck-1 + n-1Ck의 값과 같다.
+                 * */
+                else{
                     rememberBinomial[i][j] = rememberBinomial[i-1][j-1]+ rememberBinomial[i-1][j];
                 }
             }
