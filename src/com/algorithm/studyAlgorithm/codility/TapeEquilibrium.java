@@ -1,4 +1,4 @@
-package src.com.algorithm.studyAlgorithm.codility;
+package com.algorithm.studyAlgorithm.codility;
 
 /**
  * TimeComplexity 문제

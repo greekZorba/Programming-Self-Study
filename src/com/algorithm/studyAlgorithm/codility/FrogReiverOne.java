@@ -1,4 +1,4 @@
-package src.com.algorithm.studyAlgorithm.codility;
+package com.algorithm.studyAlgorithm.codility;
 
 import java.util.HashMap;
 import java.util.Map;
