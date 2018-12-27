@@ -39,21 +39,30 @@ public class FindPathByBottomUp {
         for(int i=0; i<=verticalLength; i++){
             for(int j=0; j<=horizonLength; j++){
 
+                /** 시작점 */
                 if(i==0 && j==0){
                     memoization[i][j] = map[i][j];
                     path[i][j] = START_POINT;
-                }else if(i==0){
+                }
+                /**첫번째 행일 경우 방향은 왼쪽에서만 올 수 있음 */
+                else if(i==0){
                     memoization[i][j] = memoization[i][j-1]+map[i][j];
                     path[i][j] = FROM_LEFT_DIRECTION;
-                }else if(j==0){
+                }
+                /** 첫번째 열일 경우 방향은 위쪽에서만 올 수 있음 */
+                else if(j==0){
                     memoization[i][j] = memoization[i-1][j]+map[i][j];
                     path[i][j] = FROM_UP_DIRECTION;
-                }else{
+                }
+                /** 나머지의 경우 왼쪽이나 위쪽에서 올 수 있기 때문에 비교함 */
+                else{
                     if(memoization[i-1][j] < memoization[i][j-1]){
                         memoization[i][j] = memoization[i-1][j] + map[i][j];
+                        /**위쪽 합이 더 작아서 위쪽에서 올 경우*/
                         path[i][j] = FROM_UP_DIRECTION;
                     }else{
                         memoization[i][j] = memoization[i][j-1] + map[i][j];
+                        /**왼쪽 합이 더 작아서 왼쪽에서 올 경우 */
                         path[i][j] = FROM_LEFT_DIRECTION;
                     }
                 }
@@ -63,6 +72,9 @@ public class FindPathByBottomUp {
         return memoization[verticalLength][horizonLength];
     }
 
+    /**
+     * 경로의 역방향 프린트
+     * */
     public void printReversePath(int i, int j){
 
         while(path[i][j] != START_POINT){
@@ -76,6 +88,9 @@ public class FindPathByBottomUp {
         System.out.println(i+","+j);
     }
 
+    /**
+     * 경로의 정방향 프린트
+     * */
     public void printPath(int i, int j){
 
         if(path[i][j]==START_POINT){
