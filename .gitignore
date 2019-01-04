@@ -11,3 +11,4 @@ ProgrammingStudy.iml
 *.iml
 .idea/modules.xml
 /out
+.idea/uiDesigner.xml
