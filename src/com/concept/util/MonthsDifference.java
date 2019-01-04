@@ -4,10 +4,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class DateUtil {
+/**
+ * 두 날짜간 월 차이 구하기
+ * */
+public class MonthsDifference {
 
     public static void main(String[] args){
-        DateUtil dateUtil = new DateUtil();
+        MonthsDifference monthsDifference = new MonthsDifference();
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
 
         try{
@@ -15,7 +18,7 @@ public class DateUtil {
             Date date2 = format.parse("20181205");
 
             System.out.println("두 날짜간 월 차이 :"
-                    +dateUtil.getMonthsDifference(date1, date2));
+                    +monthsDifference.getMonthsDifference(date1, date2));
         }catch (ParseException e){
             System.out.println(e);
         }

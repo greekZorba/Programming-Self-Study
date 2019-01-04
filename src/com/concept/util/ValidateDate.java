@@ -1,4 +1,4 @@
-package com.concept;
+package com.concept.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
