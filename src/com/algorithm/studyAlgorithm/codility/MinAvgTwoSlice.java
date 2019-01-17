@@ -2,6 +2,9 @@ package com.algorithm.studyAlgorithm.codility;
 
 public class MinAvgTwoSlice {
 
+    /**
+     * 시간복잡도 O(n^2)
+     * */
     public int solution(int[] A){
 
         int minIndex = 0;
