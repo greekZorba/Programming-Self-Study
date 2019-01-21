@@ -23,6 +23,9 @@ public class MaxProductOfThree {
             index[i] = i;
         }
 
+        /**
+         * 인덱스만 값의 크기에 따라 변함
+         * */
         Arrays.sort(index, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
