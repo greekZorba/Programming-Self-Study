@@ -1,49 +1,50 @@
 package com.algorithm.studyAlgorithm.codility;
 
+import java.util.EmptyStackException;
+import java.util.Stack;
+
 public class Brackets {
-    private int smallBracket = 0;
-    private int middleBracket = 0;
-    private int bigBracket = 0;
 
     public int solution(String S) {
+        int result = 0;
+        Stack<Character> checkStack = new Stack<>();
 
-        for(int i=0; i<S.length(); i++){
-            checkBracket(S.charAt(i));
+        if(S.length() >=2){
+            checkStack.push(S.charAt(0));
+        }else{
+            return result;
+        }
 
-            if(smallBracket < 0 || middleBracket < 0 || bigBracket < 0) {
-                return 0;
+        try{
+            for(int i=1; i<S.length(); i++){
+
+                if(checkStack.peek() == '(' && S.charAt(i) == ')'
+                        || checkStack.peek() == '{' && S.charAt(i) == '}'
+                        || checkStack.peek() == '[' && S.charAt(i) == ']'){
+                    checkStack.pop();
+                }else{
+                    checkStack.push(S.charAt(i));
+                }
+
             }
+
+            if(checkStack.empty()){
+                result = 1;
+            }else{
+                result = 0;
+            }
+
+        }catch (EmptyStackException e){
+            result = 0;
         }
 
-        return 1;
+        return result;
     }
 
-    private void checkBracket(char inputBracket){
-
-        if(inputBracket == '('){
-            smallBracket++;
-        }
-        else if(inputBracket == ')'){
-            smallBracket--;
-        }
-        else if(inputBracket == '{'){
-            middleBracket++;
-        }
-        else if(inputBracket == '}'){
-            middleBracket--;
-        }
-        else if(inputBracket == '['){
-            bigBracket++;
-        }
-        else if(inputBracket == ']'){
-            bigBracket--;
-        }
-
-    }
 
     public static void main(String[] args) {
         Brackets brackets = new Brackets();
-        String S = "([)()]";
+        String S = "{[()()]}";
         System.out.println(brackets.solution(S));
     }
 }
