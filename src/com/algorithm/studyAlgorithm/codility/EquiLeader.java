@@ -25,46 +25,34 @@ public class EquiLeader {
             return leader;
         }
 
+        int leaderTotalCount = 0;
         for(int i=0; i<A.length; i++){
-
-                int leaderCount = 0;
-                for(int j=0; j<=i; j++){
-
-                    if(leader == A[j]){
-                        leaderCount++;
-                    }
-                }
-
-                boolean firstCheckFlag = false;
-                if(leaderCount > (i+1)/2){
-                    firstCheckFlag = true;
-                }
-
-                leaderCount = 0;
-                for(int j=i+1; j<A.length; j++){
-
-                    if(leader == A[j]){
-                        leaderCount++;
-                    }
-                }
-
-                boolean secondCheckFlag = false;
-                if(leaderCount > (A.length-(i+1))/2){
-                    secondCheckFlag = true;
-                }
-
-                if(firstCheckFlag && secondCheckFlag){
-                    result++;
-                }
+            if(A[i] == leader){
+                leaderTotalCount++;
+            }
         }
 
+        int frontLeaderCount = 0;
+        for(int i=0; i<A.length; i++){
+
+            if(A[i] == leader){
+                frontLeaderCount++;
+            }
+
+            if(frontLeaderCount > (i+1)/2
+                && leaderTotalCount-frontLeaderCount > (A.length-(i+1))/2){
+
+                result++;
+            }
+
+        }
 
         return result;
     }
 
     public static void main(String[] args) {
         EquiLeader equiLeader = new EquiLeader();
-        int[] A = new int[]{4,3,4,4,4,4};
+        int[] A = new int[]{4,3,4,4,4,2};
         System.out.println(equiLeader.solution(A));
     }
 }
