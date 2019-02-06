@@ -1,4 +1,4 @@
-package com.algorithm.studyAlgorithm.codility;
+package com.algorithm.studyAlgorithm.codility.stacksAndQueues;
 
 import java.util.*;
 

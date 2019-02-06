@@ -1,4 +1,4 @@
-package com.algorithm.studyAlgorithm.codility;
+package com.algorithm.studyAlgorithm.codility.prefixSums;
 
 public class GenomicRangeQuery {
     private static final int IMPACT_FACTOR_OF_A = 1;

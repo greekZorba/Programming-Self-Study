@@ -1,10 +1,10 @@
-package com.algorithm.studyAlgorithm.codility;
+package com.algorithm.studyAlgorithm.codility.timeComplexity;
 
 /**
  * TimeComplexity 문제
  * 시간복잡도 : O(1)
  * */
-public class ForgJmp {
+public class FrogJmp {
 
     public static void main(String[] args){
         int X = 10;

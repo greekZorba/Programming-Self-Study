@@ -1,10 +1,10 @@
-package com.algorithm.studyAlgorithm.codility;
+package com.algorithm.studyAlgorithm.codility.arrays;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Arrays 문제
+ * arrays 문제
  *
  * */
 public class OddOccurrencesInArray {
