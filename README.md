@@ -34,10 +34,6 @@
 * [(Spring) 의존성을 주입할 때 Field Injection이 아닌 Constructor Injection을 해야하는 이유](https://github.com/greekZorba/ProgrammingStudy/blob/master/docs/why%20field%20injection%20is%20not%20recommended.md)
 * [(Spring) e.printStackTrace() vs logger.error](https://github.com/greekZorba/ProgrammingStudy/blob/master/docs/e.printstacktrace()%20vs%20logger.error.md)
 <br>
-
-<strong> codility 문제 풀기 <strong>
-* [코딜리티 풀이 소스](https://github.com/greekZorba/ProgrammingStudy/tree/master/src/com/algorithm/studyAlgorithm/codility)  
-<br>
   
 <strong> 코딩 테스트 풀이소스 </strong>
 * 2017년 카카오 블라인드 테스트(미완성)
