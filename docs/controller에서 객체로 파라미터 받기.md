@@ -8,11 +8,11 @@
 $.ajax({
     type: "GET",
     url: "<c:url value='/zorba/hello'/>",
-        dataType: 'json',
-        data: {"idx": idx, "factoryName": factoryName, "ownerName": ownerName, "location": location},
-        success: function(data){
-            // success
-        }    
+    dataType: 'json',
+    data: {"idx": idx, "factoryName": factoryName, "ownerName": ownerName, "location": location},
+    success: function(data){
+       // success
+    }    
 })
 ```
 
@@ -20,10 +20,10 @@ $.ajax({
     @ReqeustMapping(value="/zorba/hello")
     @ResponseBody
     public ChocolateBrand getChocolateBrand(HttpServletRequest request
-    , @RequestParam int idx
-    , @RequestParam String factoryName
-    , @RequestParam String ownerName
-    , @RequestParam String location){
+        , @RequestParam int idx
+        , @RequestParam String factoryName
+        , @RequestParam String ownerName
+        , @RequestParam String location){
 
         // something to do..
 
@@ -51,11 +51,11 @@ chocolateBrand.location = location;
 $.ajax({
     type: "GET",
     url: "<c:url value='/zorba/hello'/>",
-        dataType: 'json',
-        data: chocolateBrand,
-        success: function(data){
-            // success
-        }    
+    dataType: 'json',
+    data: chocolateBrand,
+    success: function(data){
+      // success
+    }    
 })
 
 ```
@@ -64,7 +64,7 @@ $.ajax({
     @ReqeustMapping(value="/zorba/hello")
     @ResponseBody
     public ChocolateBrand getChocolateBrand(HttpServletRequest request
-    , ChocolateBrand chocolateBrand){
+        , ChocolateBrand chocolateBrand){
 
         // something to do..
 
