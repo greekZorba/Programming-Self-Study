@@ -1,4 +1,4 @@
-package com.algorithm.studyAlgorithm.BinarySearchTree;
+package com.algorithm.studyAlgorithm.binarySearchTree;
 
 import java.util.Arrays;
 
@@ -11,13 +11,13 @@ import java.util.Arrays;
  *
  * 슈도 코드
  * 1. 재귀
- * BinarySearchTree(x, k) - x는 루트 노드, k는 찾는 값이다
+ * binarySearchTree(x, k) - x는 루트 노드, k는 찾는 값이다
  *  if x=NIL or k = key[x]
  *     then return x
  *
  *  if k<key[x]
- *     then return BinarySearchTree(left[x], k)
- *     else return BinarySearchTree(right[x], k)
+ *     then return binarySearchTree(left[x], k)
+ *     else return binarySearchTree(right[x], k)
  *
  * 2. 반복문
  *  IterateTreeSearch(x,k)

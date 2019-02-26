@@ -1,4 +1,4 @@
-package com.algorithm.studyAlgorithm.BinarySearchTree;
+package com.algorithm.studyAlgorithm.binarySearchTree;
 
 /********************************************************************
  *
