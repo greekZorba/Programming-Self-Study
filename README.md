@@ -13,7 +13,7 @@
 * [멱집합(PowerSet)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/PowerSet.java)
 * [퀵소트(QuickSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/QuickSort.java)
 * [기수 정렬(RadixSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/RadixSort.java)
-* [이진 검색 트리(BinarySearchTree)](https://github.com/greekZorba/AlgorithmStudy/tree/master/src/com/algorithm/studyAlgorithm/BinarySearchTree)
+* [이진 검색 트리(BinarySearchTree)](https://github.com/greekZorba/Programming-Self-Study/tree/master/src/com/algorithm/studyAlgorithm/binarySearchTree)
 <br>
 
 *동적 계획법(dynamic programming)* <br>
