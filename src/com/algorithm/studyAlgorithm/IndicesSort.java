@@ -55,6 +55,7 @@ public class IndicesSort {
         unsortedList.add(3);
         unsortedList.add(99);
         unsortedList.add(1);
+        unsortedList.add(34);
         unsortedList.add(78);
         unsortedList.add(34);
         int range = 99;
