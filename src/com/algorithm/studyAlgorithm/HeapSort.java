@@ -17,7 +17,7 @@ package com.algorithm.studyAlgorithm;
  * leftNode = index*2;
  * rightNode = index*2+1;
  *
- * 시간 복잡도는 O(n)
+ * 시간 복잡도는 O(nlogn)
  *
  * +++ 힙 정렬 추가 설명
  *
