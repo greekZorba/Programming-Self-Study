@@ -12,3 +12,7 @@ ProgrammingStudy.iml
 .idea/modules.xml
 /out
 .idea/uiDesigner.xml
+*.jar
+*.xml
+.idea/kotlinc.xml
+.idea/libraries/KotlinJavaRuntime.xml
