@@ -1,5 +1,5 @@
-#  컴퓨터 공부(프로그래밍 개념, 자료구조, 알고리즘) - Language: java
-<strong>자료구조</strong>
+#  컴퓨터 공부(언어, 프로그래밍 개념, 자료구조, 알고리즘)
+## 자료구조 
 * [백트래킹(BackTracking)- nQueen problem](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/BackTracking.java)
 * [너비우선탐색(BreadthFirstSearch)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/BreadthFirstSearch.java)
 * [버블소트(BubbleSort)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/algorithm/studyAlgorithm/BubbleSort.java)
@@ -26,7 +26,8 @@
 
 <br>
 
-<strong> 프로그래밍 개념</strong>
+---
+## 프로그래밍 개념
 * [(상속받은 DTO를 사용할 경우, 자식 DTO를 Map에 담으면 부모 DTO의 객체는 Map에 담기지 않는다)의 예시](https://github.com/greekZorba/AlgorithmStudy/tree/master/src/com/concept/aboutDTO)
 * [배타적 논리합(XorStudy)](https://github.com/greekZorba/AlgorithmStudy/blob/master/src/com/concept/XorStudy.java)
 * [DTO에 생성자를 추가해서 객체의 default 값 만들어주기](https://github.com/greekZorba/ProgrammingStudy/tree/master/src/com/concept/constructOfDto)
@@ -34,6 +35,12 @@
 * [(Spring) 의존성을 주입할 때 Field Injection이 아닌 Constructor Injection을 해야하는 이유](https://github.com/greekZorba/ProgrammingStudy/blob/master/docs/why%20field%20injection%20is%20not%20recommended.md)
 * [(Spring) e.printStackTrace() vs logger.error](https://github.com/greekZorba/ProgrammingStudy/blob/master/docs/e.printstacktrace()%20vs%20logger.error.md)
 <br>
-  
+
+---
+## 언어 
+* [JAVA 8](https://github.com/greekZorba/Programming-Self-Study/tree/master/src/com/java8)
+* [Kotlin](https://github.com/greekZorba/Programming-Self-Study/tree/master/src/com/kotlin)
+
+---
 <strong> 코딩 테스트 풀이소스 </strong>
 * 2017년 카카오 블라인드 테스트(미완성)
