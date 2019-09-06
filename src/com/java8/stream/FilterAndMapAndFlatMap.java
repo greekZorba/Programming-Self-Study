@@ -52,6 +52,7 @@ public class FilterAndMapAndFlatMap {
 
     private void studyFlatMap() {
         // flatMap은 복수개의 stream이 발생하면 하나의 stream으로 합쳐준다.
+        // flat은 평평한... 이란 의미로 여러개의 stream을 평평하게 하나로 만든다는 의미 같음
         Stream<String> result = companyList.stream().flatMap(s -> splitChar(s));
         System.out.println("flatMap 사용 시 복수개로 발생한 stream을 하나로 합쳐준다 : "
                 + result.collect(Collectors.toList()));
