@@ -3,9 +3,9 @@ package com.java8.stream;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Iterator {
+public class Iterate {
 
-    private void streamIterator() {
+    private void streamIterate() {
         /**
          * iterate를 쓰면 무한대로 진행된다.
          * 아래에 seed(5)는 사용될 인자를 나타내고, 오른쪽의 n은 seed이고
@@ -27,7 +27,7 @@ public class Iterator {
     }
 
     public static void main(String[] args) {
-        Iterator iterator = new Iterator();
-        iterator.streamIterator();
+        Iterate iterate = new Iterate();
+        iterate.streamIterate();
     }
 }
