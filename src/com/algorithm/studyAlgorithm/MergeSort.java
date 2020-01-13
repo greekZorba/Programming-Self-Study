@@ -32,6 +32,7 @@ public class MergeSort {
 
         if(startPoint < endPoint){ // 이 경우가 아니라면 배열의 크기가 1이거나 0이다
             int half = (startPoint+endPoint)/2; // 중간 지점 계산
+            System.out.println("call stack order startPoint: "+startPoint + " half : " + half + " endPoint : "+endPoint);
             mergeSort(inputArray, startPoint, half); // 배열의 중간 지점부터 시작점까지 최소 크기까지 나눔
             mergeSort(inputArray, half+1, endPoint); // 배열의 중간 지점 이후부터 마지막 점까지 최소 크기까지 나눔
             merge(inputArray, startPoint, half, endPoint);
@@ -39,6 +40,7 @@ public class MergeSort {
     }
 
     private static void merge(char[] inputArray, int startPoint, int half, int endPoint){ // 분리된 정렬된 배열을 합치는 메서드
+        System.out.println("merge order startPoint: "+startPoint + " half : " + half + " endPoint : "+endPoint);
         int start = startPoint; // 동적으로 증가될 시작점
         int tmpOrder = startPoint; // 임시 배열의 인덱스
         int afterHalf = half+1;
