@@ -46,7 +46,7 @@ public class BinarySearchTree {
         Arrays.sort(binaryTree); /** 이진검색트리로 만들어줌 */
 
         /** 마지막 인덱스가 배열의 인덱스보다 1 커야 마지막 배열도 체크할 수 있다. */
-        binarySearch(0, binaryTree.length, 56);
+        binarySearch(0, binaryTree.length, 55);
         System.out.println(result);
     }
 
@@ -57,7 +57,7 @@ public class BinarySearchTree {
         if(parentNodeIndex == startIndex || findingInt == binaryTree[parentNodeIndex]){
 
              result = findingInt != binaryTree[parentNodeIndex]
-                        ? "못찾겠다 꾀꼬리" : "숫자는 "+String.valueOf(parentNodeIndex+1)+"번째 순서에 있다";
+                        ? "못찾겠다 꾀꼬리" : "숫자는 "+(parentNodeIndex+1)+"번째 순서에 있다";
              return;
         }
 
