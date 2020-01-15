@@ -41,7 +41,7 @@ public class Fibonacci {
     public static void main(String[] args) {
         Fibonacci fibonacci = new Fibonacci();
         int[] memorize = new int[10];
-        System.out.println("재귀방식의 피보나치 구현 : "+fibonacci.recursionFibonacci(7));
+        System.out.println("재귀방식의 피보나치 구현 : "+fibonacci.recursionFibonacci(10));
         System.out.println("메모이제이션을 이용한 피보나치 구현 : "+fibonacci.memoizationFibonacci(memorize,7));
     }
 }

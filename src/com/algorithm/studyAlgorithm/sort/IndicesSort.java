@@ -1,4 +1,4 @@
-package com.algorithm.studyAlgorithm;
+package com.algorithm.studyAlgorithm.sort;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.algorithm.studyAlgorithm;
+package com.algorithm.studyAlgorithm.sort;
 
 public class QuickSort2 {
 
