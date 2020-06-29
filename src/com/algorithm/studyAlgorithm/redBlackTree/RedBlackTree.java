@@ -11,10 +11,11 @@ package com.algorithm.studyAlgorithm.redBlackTree;
  * 루트의 부모도 NIL노드라고 가정
  * 노드들은 내부노드와 NIL노드로 분류
  *
- * 각 노드들은 red이거나 black이다.
- * root와 leaves(nullable함)는 black이다.
- * 만약 노드가 red이면 해당 node의 자식 node는 black이다.
- * 모든 노드에 대해서 그 노드로부터 자손인 리프노드에 이르는 모든 경로에는 동일한 개수의 black노드가 존재한다.
+ * 레드블랙트리 조건
+ * 1. 각 노드들은 red이거나 black이다.
+ * 2. root와 leaves(nullable함)는 black이다.
+ * 3. 만약 노드가 red이면 해당 node의 자식 node는 black이다.
+ * 4. 모든 노드에 대해서 그 노드로부터 자손인 리프노드에 이르는 모든 경로에는 동일한 개수의 black노드가 존재한다.
  *
  * 노드 x의 높이 h(x)는 자신으로부터 리프 노드까지의 가장 긴 경로에 포함된 에지의 개수이다.
  * 노드 x의 블랙-높이 bh(x)는 x로부터 리프노드까지의 경로상의 블랙노드의 개수이다. (노드x 자신은 불포함)
@@ -28,6 +29,35 @@ package com.algorithm.studyAlgorithm.redBlackTree;
  * Left and Right Rotation
  * 시간복잡도 : O(1)
  * 이진탐색트리 특성 유지
+ *
+ * 위반될 가능성이 있는 조건들
+ * 1. 만약 red가 root 노드라면 위반, black으로 바꿔주기만 하면 됨
+ * 2. red 노드가 연속되면 안된다. -> 문제가 되는 노드들을 비교하면서 최악의 경우, root까지 올려서 해결(heap정렬과 유사)
+ *
+ * red - red violation만 지켜주면 됨
+ * case 1. 부모와 부모의 동일선 상의 노드(삼촌 노드)가 red일 때,
+ * -> 부모와 삼촌 노드를 black으로 변경하고 할아버지 노드는 red로 변경
+ * -> 해결은 안됐지만, 해결해야하는 노드가 할아버지 노드에서 다시 문제해결을 시작함(문제가 되는 노드가 변경됨)
+ *
+ * case 2,3. 부모와 부모의 동일선 상의 노드(삼촌 노드)가 black일 때,
+ * case 2. 자신의 노드가 부모의 오른쪽 자식 노드일 경우, -> left rotation을 하면 case 3가 됨
+ * case 3. 자신의 노드가 부모의 왼쪽 자식 노드일 경우,
+ * -> case 3가 되었을 때, 부모 노드가 right rotation을 하고, 기존의 할아버지 노드는 부모 노드의 오른쪽 자식이 됨
+ * -> 기존의 부모노드는 할아버지 노드 자리를 차지하고, black으로 변경, 오른쪽 자식노드가 된 기존의 할아버지 노드는 red로 바꿔주면 문제 해결
+ *
+ * 최악의 경우
+ * case 1이 계속 반복됨 -> 루트까지 가서 종료
+ *
+ * case 1,2,3은 부모 노드가 할아버지 노드의 왼쪽 자식일 경우
+ * case 4,5,6은 부모 노드가 할아버지 노드의 오른쪽 자식일 경우
+ *
+ * INSERT의 시간 복잡도
+ * - BST에서의 시간복잡도: O(logN)
+ * RB-INSERT-FIXED-UP
+ * - case 1에 해당할 경우, 대상 노드가 2레벨 상승
+ * - case 2,3의 경우, O(1) - rotation만 하기 때문
+ * - 따라서 트리의 높이에 비례하는 시간
+ * 즉, INSERT의 시간복잡도는 O(logN)
  * */
 public class RedBlackTree {
 
